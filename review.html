@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Clean - Review</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SMART CLEAN</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        
+        
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<main class="review-page">
+
+    <div class="review-header">
+
+        <h1>Review & Select</h1>
+
+        <p>
+            Review every category and unselect anything you want to keep.
+        </p>
+
+        <p class="review-progress-text" id="reviewProgress">
+            0 of 4 categories reviewed
+        </p>
+
+    </div>
+
+
+    <!-- CATEGORY BUTTONS -->
+
+    <div class="review-category-buttons">
+
+        <button
+            class="category-review-button active"
+            id="categoryButton0"
+            onclick="openCategory(0)">
+            <span id="categoryStatus0">○</span>
+            Duplicate Files
+        </button>
+
+        <button
+            class="category-review-button"
+            id="categoryButton1"
+            onclick="openCategory(1)">
+            <span id="categoryStatus1">○</span>
+            Old Screenshots
+        </button>
+
+        <button
+            class="category-review-button"
+            id="categoryButton2"
+            onclick="openCategory(2)">
+            <span id="categoryStatus2">○</span>
+            Large Files
+        </button>
+
+        <button
+            class="category-review-button"
+            id="categoryButton3"
+            onclick="openCategory(3)">
+            <span id="categoryStatus3">○</span>
+            Email Attachments
+        </button>
+
+    </div>
+
+
+    <!-- CURRENT CATEGORY -->
+
+    <div class="current-category-box">
+
+        <h2 id="currentCategory">
+            Duplicate Files
+        </h2>
+
+        <p>
+            All detected files are selected.
+            Uncheck the files you want to keep.
+        </p>
+
+    </div>
+
+
+    <!-- SELECT ALL -->
+
+    <div class="select-all-box">
+
+        <label>
+            <input
+                type="checkbox"
+                id="selectAll"
+                checked>
+
+            Select All
+        </label>
+
+    </div>
+
+
+    <!-- FILES -->
+
+    <div
+        class="review-file-grid"
+        id="reviewFileList">
+    </div>
+
+
+    <!-- CATEGORY NAVIGATION -->
+
+    <div class="category-navigation">
+
+        <button
+            id="previousCategoryButton"
+            onclick="previousCategory()">
+            ← Previous
+        </button>
+
+        <button
+            id="nextCategoryButton"
+            onclick="nextCategory()">
+            Next Category →
+        </button>
+
+    </div>
+
+
+    <!-- FINAL SUMMARY -->
+
+    <div class="review-summary">
+
+        <div>
+
+            <h3 id="selectedCount">
+                0 files selected
+            </h3>
+
+            <p id="selectedStorage">
+                0 GB will be freed
+            </p>
+
+        </div>
+
+
+        <button
+            id="reviewContinueButton"
+            disabled>
+
+            Continue
+
+        </button>
+
+    </div>
+
+</main>
+
+<script src="review.js"></script>
+
+</body>
+</html>

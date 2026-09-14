@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Clean</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    
+    <!-- SPLASH SCREEN -->
+
+<section class="splash-page" id="splashPage">
+
+    <div class="splash-logo">
+
+        <span class="smart-text">SMART</span>
+
+        <img
+            src="dustbin-logo-exact.png"
+            alt="Smart Clean Dustbin"
+            class="dustbin-logo"
+        >
+
+        <span class="clean-text">CLEAN</span>
+
+    </div>
+
+</section>
+<header>
+        <div class="logo">SMART CLEAN</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            
+            
+            <a href="about.html">About</a>
+            
+        </nav>
+    </header>
+    <main>
+
+    <!-- PERMISSION SLIDE -->
+
+    <section class="access-page" id="accessPage">
+
+        <div class="smart-clean-logo">
+            SMART CLEAN
+        </div>
+
+        <h1>
+            Give us permission to<br>
+            clean smarter.
+        </h1>
+
+        <p class="access-description">
+            SMART CLEAN needs access to your selected storage
+            sources to find duplicates, unwanted files and
+            storage-consuming items.
+        </p>
+
+        <div class="permission-list">
+
+            <div class="permission-card">
+
+                <div class="permission-icon">
+                    📷
+                </div>
+
+                <div class="permission-content">
+
+                    <h2>Google Photos</h2>
+
+                    <p>
+                        Access your photos and videos
+                    </p>
+
+                </div>
+
+                <button class="allow-button" onclick="allowAccess(this, 'Google Photos')">
+                    Allow Access
+                </button>
+
+            </div>
+
+
+            <div class="permission-card">
+
+                <div class="permission-icon">
+                    🖼️
+                </div>
+
+                <div class="permission-content">
+
+                    <h2>Gallery</h2>
+
+                    <p>
+                        Access photos and videos stored on your device
+                    </p>
+
+                </div>
+
+                <button class="allow-button" onclick="allowAccess(this, 'Gallery')">
+                    Allow Access
+                </button>
+
+            </div>
+
+
+            <div class="permission-card">
+
+                <div class="permission-icon">
+                    📁
+                </div>
+
+                <div class="permission-content">
+
+                    <h2>Files &amp; Documents</h2>
+
+                    <p>
+                        Access documents and other files
+                    </p>
+
+                </div>
+
+                <button class="allow-button" onclick="allowAccess(this, 'Files & Documents')">
+                    Allow Access
+                </button>
+
+            </div>
+
+
+            <div class="permission-card">
+
+                <div class="permission-icon">
+                    ✉️
+                </div>
+
+                <div class="permission-content">
+
+                    <h2>Gmail</h2>
+
+                    <p>
+                        Find large email attachments
+                    </p>
+
+                </div>
+
+                <button class="allow-button" onclick="allowAccess(this, 'Gmail')">
+                    Allow Access
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button class="continue-button" onclick="showStorageOverview()">
+
+            Continue
+        </button>
+
+
+        <p class="control-text">
+            You stay in control. SMART CLEAN only scans the sources
+            you choose to give permission to.
+        </p>
+
+    </section>
+
+<!-- STORAGE OVERVIEW -->
+
+<section class="storage-overview-page" id="storageOverviewPage" style="display: none;">
+
+    <div class="storage-header">
+
+        <h1>Your Storage Overview</h1>
+
+        <p>Let's see what's taking up your space.</p>
+
+    </div>
+
+
+    <!-- INDIVIDUAL STORAGE BOXES -->
+
+    <div class="storage-boxes" id="storageBoxes">
+
+    </div>
+
+
+    <!-- SMART SCAN BUTTON -->
+
+    <button id="smartScanBtn" class="smart-scan-button">
+        ✨ Smart Scan
+    </button>
+
+
+</section>
+
+    
+
+
+
+<!-- SMART SCAN SLIDE -->
+
+<section class="smart-scan-page" id="smartScanPage" style="display: none;">
+
+    <div class="smart-scan-card">
+
+        <h1>Smart Scan</h1>
+
+        <p id="scanStatus">
+            Preparing your smart scan...
+        </p>
+
+        <div class="scan-progress-container">
+
+            <div
+                class="scan-progress-bar"
+                id="scanProgressBar">
+            </div>
+
+        </div>
+
+        <p id="scanPercentage">
+            0%
+        </p>
+
+    </div>
+
+</section>
+<script src="script.js"></script>
+
+</body>
+</html>
