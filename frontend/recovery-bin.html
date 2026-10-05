@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Clean - Recovery Bin</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<main class="recovery-bin-page">
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="recovery-header">
+
+        <div class="recovery-brand">
+
+            <div class="recovery-brand-icon">
+                ♻
+            </div>
+
+            <div>
+
+                <div class="recovery-brand-name">
+                    SMART <span>CLEAN</span>
+                </div>
+
+                <div class="recovery-brand-tagline">
+                    Smart Scan. Safe Clean.
+                </div>
+
+            </div>
+
+        </div>
+                <button
+            type="button"
+            class="organization-button"
+            onclick="openOrganization()">
+
+            Organization of Remaining Files
+
+        </button>
+
+
+        <div class="recovery-protection">
+
+            <div class="protection-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <strong>Your data is protected</strong>
+
+                <span>
+                    Items in Recovery Bin are safe
+                </span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         RECOVERY CONTENT
+    ========================= -->
+
+    <section class="recovery-main">
+
+
+        <!-- BIN ICON -->
+
+        <div class="recovery-bin-icon">
+            🗑
+        </div>
+
+
+        <h1>RECOVERY BIN</h1>
+
+        <p class="recovery-subtitle">
+            You have just deleted the following items.
+        </p>
+
+
+
+        <!-- =========================
+             INFORMATION BOX
+        ========================= -->
+
+        <div class="recovery-info-box">
+
+            <div class="info-shield">
+                ✓
+            </div>
+
+            <div>
+
+                <h3>
+                    Review and take action
+                </h3>
+
+                <p>
+                    These items are moved to Recovery Bin and not deleted permanently.
+                </p>
+
+                <p>
+                    Choose what you want to restore or permanently remove.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             RECOVERY TABLE CARD
+        ========================= -->
+
+        <div class="recovery-table-card">
+
+
+            <!-- SUMMARY -->
+
+            <div class="recovery-summary-row">
+
+
+                <div class="summary-item">
+
+                    <div class="summary-icon">
+                        ◔
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Items
+                        </span>
+
+                        <strong id="recoveryFileCount">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="summary-divider"></div>
+
+
+
+                <div class="summary-item">
+
+                    <div>
+
+                        <span>
+                            Total Size
+                        </span>
+
+                        <strong id="recoveryStorage">
+                            0 GB
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="recovery-actions-area">
+
+                    <h3>
+                        What would you like to do?
+                    </h3>
+
+                    <div class="recovery-main-buttons">
+
+                        <button
+                        type="button"
+                            class="restore-all-button"
+                            onclick="restoreSelected()">
+
+                            ↻ Restore Selected
+
+                        </button>
+
+
+                        <button
+                        type="button"
+                            class="delete-permanently-button"
+                            onclick="deleteSelected()">
+
+                            🗑 Delete Permanently
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 TABLE HEADER
+            ========================= -->
+
+            <div class="recovery-table-header">
+
+                <div class="check-column">
+                    <input
+                        type="checkbox"
+                        id="selectAllRecovery"
+                        onchange="toggleAllRecovery(this)">
+                </div>
+
+                <div>
+                    Item Name
+                </div>
+
+                <div>
+                    Source
+                </div>
+
+                <div>
+                    Size
+                </div>
+
+                <div>
+                    Deleted On
+                </div>
+
+                <div>
+                    Action
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 FILES
+            ========================= -->
+
+            <div id="recoveryFileList">
+
+                <!-- Files will be inserted by recovery-bin.js -->
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             TIP BOX
+        ========================= -->
+
+        <div class="recovery-tip">
+
+            <div class="tip-icon">
+                💡
+            </div>
+
+            <div>
+
+                <strong>
+                    Tip
+                </strong>
+
+                <p>
+                    You can restore any items to their original location.
+                </p>
+
+                <p>
+                    If you delete them permanently, you won't be able to get them back.
+                </p>
+
+            </div>
+
+                </div>
+
+
+        <!-- START AGAIN BUTTON -->
+
+        
+
+
+    </section>
+
+</main>
+
+
+<script src="recovery-bin.js"></script>
+
+</body>
+
+</html>

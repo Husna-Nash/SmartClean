@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Clean - Select Files</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">SMART CLEAN</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="organization.html">Organization</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+
+    <main class="home-page">
+
+        <section class="hero-section">
+
+            <h1>Select Your Files</h1>
+
+            <p>
+                Choose the files you want Smart Clean to analyze.
+            </p>
+
+
+            <div class="home-card">
+
+                <h2>Select Files</h2>
+
+                <input type="file" id="fileInput" multiple>
+
+                <button id="scanBtn">
+                    Scan Files
+                </button>
+
+                <div id="fileList"></div>
+
+                <p id="scanMessage"></p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

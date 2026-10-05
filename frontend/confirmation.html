@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Clean - Confirm Cleanup</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">SMART CLEAN</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        
+        
+        <a href="about.html">About</a>
+    </nav>
+
+</header>
+
+
+<main class="confirmation-page">
+
+    <div class="confirmation-header">
+
+        <h1>Ready to Clean?</h1>
+
+        <p>
+            Please check your selection before confirming.
+        </p>
+
+    </div>
+
+
+    <!-- CLEANUP SUMMARY -->
+
+    <div class="confirmation-summary">
+
+        <div class="confirmation-summary-item">
+
+            <h2 id="confirmationFileCount">
+                0
+            </h2>
+
+            <p>
+                Files Selected
+            </p>
+
+        </div>
+
+
+        <div class="confirmation-summary-item">
+
+            <h2 id="confirmationStorage">
+                0 GB
+            </h2>
+
+            <p>
+                Storage to be Freed
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- SELECTED FILES -->
+
+    <div class="selected-files-box">
+
+        <h2>Selected Files</h2>
+
+        <div id="selectedFilesList">
+        </div>
+
+    </div>
+
+
+    <!-- WARNING -->
+
+    <div class="confirmation-warning">
+
+        <strong>⚠ Before you continue</strong>
+
+        <p>
+            Make sure you are happy with your selection.
+            The selected files will be included in the cleanup.
+        </p>
+
+    </div>
+
+
+    <!-- BUTTONS -->
+
+    <div class="confirmation-buttons">
+
+        <button
+            class="go-back-button"
+            onclick="goBackToReview()">
+
+            ← Go Back
+
+        </button>
+
+
+        <button
+            class="confirm-cleanup-button"
+            onclick="confirmCleanup()">
+
+            Confirm Cleanup
+
+        </button>
+
+    </div>
+
+</main>
+
+
+<script src="confirmation.js"></script>
+
+</body>
+
+</html>
